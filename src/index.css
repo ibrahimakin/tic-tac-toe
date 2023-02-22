@@ -1,13 +1,67 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.filled {
+    border: 1px solid #999;
+    border-radius: 0;
+}
+
+.square {
+    background-color: #fff;
+    border: 1px solid #999;
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 34px;
+    min-height: 34px;
+    min-width: 34px;
+    height: 18vmin;
+    width: 18vmin;
+    padding: 0;
+    cursor: pointer;
+    text-align: center;
+}
+
+#collapse:hover+.filled,
+.pin-menu:hover+.filled,
+.filled:hover,
+.square:hover {
+    border: 2px solid #000;
+}
+
+.game-info {
+    width: 195px;
+    color: #fff;
+}
+
+.status {
+    font-size: 1.2rem;
+    margin-left: 23px;
+}
+
+.game-info ul {
+    padding-inline-start: 40px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+
+.game-info button {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    padding: 5px 0;
+    color: inherit;
+}
+
+.game-info button:hover {
+    font-weight: 700;
 }
