@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { getLangTicTacToe } from './helpers';
-import { langTicTacToe } from './lang';
+import { lang_xox, getLangXOX } from './lang';
 
 function Square({ value, onSquareClick }) {
     return (
@@ -49,7 +48,7 @@ export default function Game() {
     const [currentMove, setCurrentMove] = useState(0);
     const xIsNext = currentMove % 2 === 0;
     const currentSquares = history[currentMove];
-    const lang = getLangTicTacToe();
+    const lang = getLangXOX();
 
     function handlePlay(nextSquares) {
         const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
@@ -61,8 +60,8 @@ export default function Game() {
         <li key={move}>
             <button onClick={() => setCurrentMove(move)}>
                 {move > 0 ?
-                    <><span lang-tag="go_to_move">{langTicTacToe[lang]['go_to_move']}</span>{move}</> :
-                    <span lang-tag="go_to_start">{langTicTacToe[lang]['go_to_start']}</span>
+                    <><span lang-tag="go_to_move">{lang_xox[lang]['go_to_move']}</span>{move}</> :
+                    <span lang-tag="go_to_start">{lang_xox[lang]['go_to_start']}</span>
                 }
             </button>
         </li>
@@ -78,9 +77,9 @@ export default function Game() {
             <div className="game-info">
                 <div className="status">
                     {result.winner ?
-                        <><span lang-tag="winner">{langTicTacToe[lang]['winner']}</span>{result.winner}</> :
-                        result.draw ? <span lang-tag="draw">{langTicTacToe[lang]['draw']}</span> :
-                            <><span lang-tag="next_player">{langTicTacToe[lang]['next_player']}</span>{xIsNext ? 'X' : 'O'}</>
+                        <><span lang-tag="winner">{lang_xox[lang]['winner']}</span>{result.winner}</> :
+                        result.draw ? <span lang-tag="draw">{lang_xox[lang]['draw']}</span> :
+                            <><span lang-tag="next_player">{lang_xox[lang]['next_player']}</span>{xIsNext ? 'X' : 'O'}</>
                     }
                 </div>
                 <ul>{moves}</ul>
