@@ -1,4 +1,4 @@
-export const langTicTacToe = {
+export const lang_xox = {
     tr: {
         next_player: 'Sıradaki Oyuncu: ',
         go_to_start: 'Oyun başlangıcına git',
@@ -14,3 +14,10 @@ export const langTicTacToe = {
         draw: 'Draw'
     }
 };
+
+export function getLangXOX() {
+    let localLang;
+    try { localLang = localStorage.getItem('lang'); }
+    catch (e) { }
+    return localLang === 'tr' ? 'tr' : 'en';
+}

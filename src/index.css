@@ -7,7 +7,6 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    height: 100%;
 }
 
 .filled {
@@ -39,7 +38,7 @@ body {
 }
 
 .game-info {
-    width: 195px;
+    width: 200px;
     color: #fff;
 }
 
