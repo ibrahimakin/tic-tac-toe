@@ -20,37 +20,37 @@ body {
     float: left;
     font-size: 24px;
     font-weight: bold;
-    line-height: 34px;
     min-height: 34px;
     min-width: 34px;
     height: 18vmin;
     width: 18vmin;
     padding: 0;
     cursor: pointer;
-    text-align: center;
 }
 
 #collapse:hover+.filled,
-.pin-menu:hover+.filled,
-.filled:hover,
+.menu.hvr>.pin-menu:hover+.filled,
+:not(.menu)>.filled:hover,
+.menu.hvr>.filled:hover,
 .square:hover {
     border: 2px solid #000;
 }
 
 .game-info {
-    width: 200px;
+    text-align: center;
     color: #fff;
+    height: 300px;
+    width: 210px;
 }
 
 .status {
     font-size: 1.2rem;
-    margin-left: 23px;
+    margin-bottom: 1em;
 }
 
-.game-info ul {
-    padding-inline-start: 40px;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
+.status span:not([lang-tag]) {
+    display: inline-block;
+    width: 1em;
 }
 
 .game-info button {
