@@ -64,3 +64,8 @@ body {
 .game-info button:hover {
     font-weight: 700;
 }
+
+.game-info button:disabled {
+    pointer-events: none;
+    opacity: .5;
+}
