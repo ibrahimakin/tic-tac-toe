@@ -56,11 +56,11 @@ export default function Game() {
         setCurrentMove(nextHistory.length - 1);
     }
 
-    const moves = history.map((squares, move) => (
+    const moves = history.length > 1 && history.map((squares, move) => (
         <div key={move}>
             <button disabled={move === currentMove} onClick={() => setCurrentMove(move)}>
                 {move === currentMove ? move > 0 ?
-                    <><span lang-tag="move">{lang_xox[lang]['move']}</span>{move}</> : history.length > 1 &&
+                    <><span lang-tag="move">{lang_xox[lang]['move']}</span>{move}</> :
                     <span lang-tag="start">{lang_xox[lang]['start']}</span> : move > 0 ?
                     <><span lang-tag="go_to_move">{lang_xox[lang]['go_to_move']}</span>{move}</> :
                     <span lang-tag="go_to_start">{lang_xox[lang]['go_to_start']}</span>
